@@ -1,10 +1,10 @@
 // "use client"
 import WhatOur from "./common/WhatOur";
-// import SimpleMap from "./contact-us/mapview/MapView";
+
 import NewsLetter from "./homecontent/NewsLetter";
 import HomeBanner from "./pageslider/HomeBanner";
 import HomeImage from "./pageslider/HomeImage";
-// import dynamic from 'next/dynamic';
+
 
 
 
@@ -23,10 +23,6 @@ export default function Home() {
       <HomeImage />
       <WhatOur />
       <NewsLetter />
-      {/* <main>
-       
-        <SimpleMap />
-      </main> */}
     </>
   );
 }

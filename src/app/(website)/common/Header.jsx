@@ -8,7 +8,9 @@ import Link from 'next/link'
 
 
 export default function Header() {
-    // let[isOpen, setIsopen]=useState[false]
+    let [isOpen, setIsopen] = useState(false)
+
+
 
     return (
         <>
@@ -48,11 +50,37 @@ export default function Header() {
                             <div className='absolute top-[23%] left-[-8%] bg-[#C09578] w-[22px] h-[23px] flex justify-center text-white items-center rounded-full p-1'>
                                 0
                             </div>&nbsp;
-                            <button className=' flex justify-center items-center gap-2 cursor-pointer hover:text-[#C09578] font-semibold text-sm' >
+                            <button type="button" onClick={(() => setIsopen(true))} className=' flex justify-center items-center gap-2 cursor-pointer hover:text-[#C09578] font-semibold text-sm' >
                                 < FaShoppingCart /> |
                                 <p>Rs. 0.00</p>
                                 < IoIosArrowDown />
                             </button>
+
+                            {isOpen && (
+                                <div className="fixed inset-0 flex justify-end">
+                                    {/* Transparent Overlay */}
+                                    <div
+                                        className="fixed inset-0 bg-black opacity-50"
+                                        onClick={() => setIsopen(false)}
+                                    ></div>
+
+                                    {/* Offcanvas Panel (Right Side) */}
+                                    <div
+                                        className={`relative w-[300px] bg-white shadow-lg h-full p-4 transition-all duration-500 ease-in-out transform ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}
+                                    >
+                                        <button
+                                            onClick={() => setIsopen(false)}
+                                            className="absolute top-2 right-2 text-gray-500 hover:text-black"
+                                        >
+                                            ✕
+                                        </button>
+                                        <h2 className="text-lg font-semibold mb-4">Your Cart</h2>
+                                        <p>Cart is empty for now!</p>
+                                    </div>
+                                </div>
+                            )}
+
+
                         </div>
                     </form>
                 </div>
@@ -66,6 +94,8 @@ export default function Header() {
                     <li className='text-[#C09578] active'>
                         <a>HOME</a>
                     </li>
+
+                    {/* LIVING */}
                     <li className='relative group hover:text-[#C09578] py-7 cursor-pointer'>
                         <a className='flex items-center gap-1'>
                             LIVING

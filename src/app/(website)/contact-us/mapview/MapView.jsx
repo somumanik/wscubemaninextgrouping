@@ -21,7 +21,7 @@ export default function SimpleMap() {
   }, []);
 
   return (
-    <MapContainer center={[28.6139, 77.2090]} zoom={13} style={{ height: '500px', width: '100%' }}>
+    <MapContainer center={[28.6139, 77.2090]} zoom={13} style={{ height: '500px', width: '100%', zIndex:"-10" }}>
       <TileLayer
         attribution='&copy; OpenStreetMap contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -32,3 +32,62 @@ export default function SimpleMap() {
     </MapContainer>
   );
 }
+
+
+
+
+// 2nd Option
+
+// npm install @react-google-maps/api
+
+
+// 'use client';
+// import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
+
+// export default function MyMap() {
+//   return (
+//     <LoadScript googleMapsApiKey="YOUR_API_KEY">
+//       <GoogleMap
+//         mapContainerStyle={{ height: "500px", width: "100%" }}
+//         center={{ lat: 28.6139, lng: 77.2090 }}
+//         zoom={13}
+//       >
+//         <Marker position={{ lat: 28.6139, lng: 77.2090 }} />
+//       </GoogleMap>
+//     </LoadScript>
+//   );
+// }
+
+
+
+
+
+// 3rd Option
+
+// npm install mapbox-gl
+
+
+// 'use client';
+// import { useEffect, useRef } from 'react';
+// import mapboxgl from 'mapbox-gl';
+
+// mapboxgl.accessToken = 'YOUR_MAPBOX_TOKEN';
+
+// export default function MapboxMap() {
+//   const mapContainer = useRef();
+
+//   useEffect(() => {
+//     const map = new mapboxgl.Map({
+//       container: mapContainer.current,
+//       style: 'mapbox://styles/mapbox/streets-v11',
+//       center: [77.2090, 28.6139],
+//       zoom: 12
+//     });
+
+//     new mapboxgl.Marker().setLngLat([77.2090, 28.6139]).addTo(map);
+
+//     return () => map.remove();
+//   }, []);
+
+//   return <div ref={mapContainer} style={{ height: '500px', width: '100%' }} />;
+// }
