@@ -1,6 +1,6 @@
 "use client";
 
-import dynamic from "next/dynamic";
+// import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
 import Link from 'next/link';
 import React from 'react';
@@ -8,11 +8,16 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 import { FaBuildingCircleExclamation } from "react-icons/fa6";
 import { MdLocalPhone } from "react-icons/md";
 import { CiMail } from "react-icons/ci";
+import MapView from "./mapview/MapView";
 
 // 👇 Dynamically import MapView (SSR disabled)
-const MapView = dynamic(() => import("@/app/(website)/contact-us/mapview/MapView"), {
-    ssr: false,
-});
+// const MapView = dynamic(() => import("@/app/(website)/contact-us/mapview/MapView"), {
+//     ssr: false,
+// });
+
+
+
+
 
 export default function ContactUs() {
     const [form, setForm] = useState({
@@ -48,7 +53,7 @@ export default function ContactUs() {
             <div className='max-w-[1320px] mx-auto'>
                 {/* Map View */}
                 <div className="w-full h-[500px] rounded shadow overflow-hidden">
-                    <MapView />
+                    <MapView/>
                 </div>
 
                 {/* Contact Info and Form */}
