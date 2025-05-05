@@ -55,88 +55,153 @@ export default function Header() {
 
             {/* nav */}
             <nav>
-                <ul className='flex justify-center items-center gap-10 text-sm py-5 font-semibold font-sans '>
+                <ul className='flex justify-center items-center gap-10 text-sm font-semibold font-sans '>
                     <li className='text-[#C09578] active'>
                         <a>HOME</a>
                     </li>
-                    <li className='relative group hover:text-[#C09578] cursor-pointer'>
+                    <li className='relative group hover:text-[#C09578] py-7 cursor-pointer'>
                         <a className='flex items-center gap-1'>
                             LIVING
                             <IoIosArrowDown />
                         </a>
                         {/* Submenu */}
-                        <ul className='absolute top-[29px] left-0 hidden group-hover:block bg-white shadow-lg w-150 mt-3 transition-all duration-300 ease-in-out z-10 opacity-0 group-hover:opacity-100 max-h-0 group-hover:max-h-[200px]'>
-                            <li className='hover:bg-gray-100'>
-                                <Link href={'/page1'} className='block px-4 py-2 text-sm'>
-                                    Page 1
-                                </Link>
-                                <ul className='block px-4 py-2 text-sm'>
-                                    <li>Side and end atbles</li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                </ul>
-                            </li>
-                            <li className='hover:bg-gray-100'>
-                                <Link href={'/page2'} className='block px-4 py-2 text-sm'>
-                                    Page 2
-                                </Link>
-                            </li>
-                            <li className='hover:bg-gray-100'>
-                                <Link href={'/page3'} className='block px-4 py-2 text-sm'>
-                                    Page 3
-                                </Link>
-                            </li>
+                        <ul className='absolute top-[64px] left-0 hidden group-hover:block bg-white  mt-3 transition-all duration-300 ease-in-out z-10 opacity-0 group-hover:opacity-100'>
+                            {/* Row Layout for Tables, Page 2, and Page 3 */}
+                            <div className='flex'>
+                                {/* Left Column: Tables */}
+                                <div className='w-52'>
+                                    <li className=''>
+                                        <Link href={'/page1'} className='block px-4 py-2 text-black text-sm'>
+                                            Tables
+                                        </Link>
+                                        <ul className='block px-4 py-2 text-sm'>
+                                            <li className='py-1 text-gray-400 hover:text-[#C09578]'>Nest of Tables</li>
+                                            <li className='py-1 text-gray-400 hover:text-[#C09578]'>Console Table</li>
+                                            <li className='py-1 text-gray-400 hover:text-[#C09578]'>Coffee Table Sets</li>
+                                            <li className='py-1 text-gray-400 hover:text-[#C09578]'>Coffee Tables</li>
+                                        </ul>
+                                    </li>
+                                </div>
+
+                                {/* Right Columns: Page 2 and Page 3 */}
+                                <div className=' flex'>
+                                    <div className='w-50'>
+                                        <li className=''>
+                                            <Link href={'/living-storage'} className='block px-4 py-2 text-black text-sm'>
+                                                LIVING STORAGE
+                                            </Link>
+                                        </li>
+                                        <ul className='block px-4 py-2  text-sm'>
+                                            <li className='py-1 text-gray-400 hover:text-[#C09578]'>Prayer Units</li>
+                                            <li className='py-1 text-gray-400 hover:text-[#C09578]'>Display Unit</li>
+                                            <li className='py-1 text-gray-400 hover:text-[#C09578]'>Shoe Racks</li>
+                                            <li className='py-1 text-gray-400 hover:text-[#C09578]'>Chest Of Drawers</li>
+                                            <li className='py-1 text-gray-400 hover:text-[#C09578]'>Cabinets And Sideboard</li>
+                                            <li className='py-1 text-gray-400 hover:text-[#C09578]'>Bookshelves</li>
+                                            <li className='py-1 text-gray-400 hover:text-[#C09578]'>TV Units</li>
+                                        </ul>
+                                    </div>
+                                    <div className='w-50'>
+                                        <li className=''>
+                                            <Link href={'/mirrors'} className='block px-4 py-2 text-black text-sm'>
+                                                MIRRORS
+                                            </Link>
+                                            <ul className='block px-4 py-2  text-sm'>
+                                                <li className='py-1 text-gray-400 hover:text-[#C09578]'>Wooden Mirrors</li>
+                                            </ul>
+                                        </li>
+                                    </div>
+                                </div>
+                            </div>
                         </ul>
                     </li>
-                    <li className='relative group hover:text-[#C09578] cursor-pointer'>
+
+                    {/* SOFA */}
+                    <li className='relative group hover:text-[#C09578] py-7 cursor-pointer'>
                         <a className='flex items-center gap-1'>
                             SOFA
                             <IoIosArrowDown />
                         </a>
                         {/* Submenu */}
-                        <ul className='absolute top-[29px] left-0 hidden group-hover:block bg-white shadow-lg w-40 mt-3 transition-all duration-300 ease-in-out z-10 opacity-0 group-hover:opacity-100 max-h-0 group-hover:max-h-[200px] '>
-                            <li className='hover:bg-gray-100'>
-                                <Link href={'/page1'} className='block px-4 py-2 text-sm'>
-                                    Page 1
-                                </Link>
-                            </li>
-                            <li className='hover:bg-gray-100'>
-                                <Link href={'/page2'} className='block px-4 py-2 text-sm'>
-                                    Page 2
-                                </Link>
-                            </li>
-                            <li className='hover:bg-gray-100'>
-                                <Link href={'/page3'} className='block px-4 py-2 text-sm'>
-                                    Page 3
-                                </Link>
-                            </li>
+                        <ul className='absolute top-[64px] left-0 hidden group-hover:block bg-white  mt-3 transition-all duration-300 ease-in-out z-10 opacity-0 group-hover:opacity-100'>
+                            {/* Row Layout for Tables, Page 2, and Page 3 */}
+                            <div className='flex'>
+                                {/* Left Column: Tables */}
+                                <div className='w-52'>
+                                    <li className=''>
+                                        <Link href={'/page1'} className='block px-4 py-2 text-black text-sm'>
+                                            SOFA CUM BED
+                                        </Link>
+                                        <ul className='block px-4 py-2 text-sm'>
+                                            <li className='py-1 text-gray-400 hover:text-[#C09578]'>Wooden Sofa Cum Bed</li>
+
+                                        </ul>
+                                    </li>
+                                </div>
+
+                                {/* Right Columns: Page 2 and Page 3 */}
+                                <div className=' flex'>
+                                    <div className='w-50'>
+                                        <li className=''>
+                                            <Link href={'/living-storage'} className='block px-4 py-2 text-black text-sm'>
+                                                SOFA SETS
+                                            </Link>
+                                        </li>
+                                        <ul className='block px-4 py-2  text-sm'>
+                                            <li className='py-1 text-gray-400 hover:text-[#C09578]'>L Shape Sofa</li>
+                                            <li className='py-1 text-gray-400 hover:text-[#C09578]'>1 Seater Sofa</li>
+                                            <li className='py-1 text-gray-400 hover:text-[#C09578]'>2 Seater Sofa</li>
+                                            <li className='py-1 text-gray-400 hover:text-[#C09578]'>3 Seater Sofa</li>
+                                            <li className='py-1 text-gray-400 hover:text-[#C09578]'>Wooden Sofa Sets</li>
+
+                                        </ul>
+                                    </div>
+                                    <div className='w-50'>
+                                        <li className=''>
+                                            <Link href={'/mirrors'} className='block px-4 py-2 text-black text-sm'>
+                                                SWING JHULA
+                                            </Link>
+                                            <ul className='block px-4 py-2  text-sm'>
+                                                <li className='py-1 text-gray-400 hover:text-[#C09578]'>Wooden Jhula</li>
+                                            </ul>
+                                        </li>
+                                    </div>
+                                </div>
+                            </div>
                         </ul>
                     </li>
-                    {/* Pages Menu with Submenu on Hover */}
-                    <li className='relative group hover:text-[#C09578] cursor-pointer'>
+
+                    {/* PAGES*/}
+                    <li className='relative group hover:text-[#C09578] py-7 cursor-pointer'>
                         <a className='flex items-center gap-1'>
                             PAGES
                             <IoIosArrowDown />
                         </a>
                         {/* Submenu */}
-                        <ul className='absolute top-[29px] left-0 hidden group-hover:block bg-white shadow-lg w-40 mt-3 transition-all duration-300 ease-in-out z-10 opacity-0 group-hover:opacity-100 max-h-0 group-hover:max-h-[200px] '>
-                            <li className='hover:bg-gray-100'>
-                                <Link href={'/page1'} className='block px-4 py-2 text-sm'>
-                                    Page 1
-                                </Link>
-                            </li>
-                            <li className='hover:bg-gray-100'>
-                                <Link href={'/page2'} className='block px-4 py-2 text-sm'>
-                                    Page 2
-                                </Link>
-                            </li>
-                            <li className='hover:bg-gray-100'>
-                                <Link href={'/page3'} className='block px-4 py-2 text-sm'>
-                                    Page 3
-                                </Link>
-                            </li>
+                        <ul className='absolute top-[64px] left-0 hidden group-hover:block bg-white  mt-3 transition-all duration-300 ease-in-out z-10 opacity-0 group-hover:opacity-100'>
+                            {/* Row Layout for Tables, Page 2, and Page 3 */}
+                            <div className='flex'>
+                                {/* Left Column: Tables */}
+                                <div className='w-52'>
+                                    <li className=''>
+                                        {/* <Link href={'/page1'} className='block px-4 py-2 text-black text-sm'>
+                                            Tables
+                                        </Link> */}
+                                        <ul className='block px-4 py-2 text-sm'>
+                                            <li className='py-1 text-gray-400 hover:text-[#C09578]'>
+                                                <Link href={'/about-us'} >About Us</Link></li>
+                                            <li className='py-1 text-gray-400 hover:text-[#C09578]'>
+                                                <Link href={'/cart'} >Cart</Link></li>
+                                            <li className='py-1 text-gray-400 hover:text-[#C09578]'>
+                                                <Link href={'/checkout'} >Checkout</Link ></li>
+                                            <li className='py-1 text-gray-400 hover:text-[#C09578]'>
+                                                <Link href={'/frequently-questions'} >Frequency Questions</Link ></li>
+                                        </ul>
+                                    </li>
+                                </div>
+
+
+                            </div>
                         </ul>
                     </li>
                     <li className='hover:text-[#C09578] cursor-pointer'>
