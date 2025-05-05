@@ -1,7 +1,6 @@
 import WhatOur from "./common/WhatOur";
 import MapView from "./contact-us/mapview/MapView";
 import NewsLetter from "./homecontent/NewsLetter";
-
 import HomeBanner from "./pageslider/HomeBanner";
 import HomeImage from "./pageslider/HomeImage";
 
@@ -14,7 +13,7 @@ import HomeImage from "./pageslider/HomeImage";
 
 
 export default function Home() {
-  
+
   return (
     <>
       <HomeBanner />
@@ -22,9 +21,8 @@ export default function Home() {
       <WhatOur />
       <NewsLetter />
       <main className="p-6">
-        <h1 className="text-2xl font-bold mb-4">My Map App</h1>
+       
         <MapView />
-        
       </main>
     </>
   );
