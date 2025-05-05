@@ -22,7 +22,7 @@ export default function Wishlist() {
                 {/* Empty Cart View */}
                 <div className="bg-white rounded-lg shadow-2xl p-8 max-w-md w-full text-center">
                     <img
-                        src="/empty-cart.png"
+                        src="https://wscubetech.co/Assignments/furniture/public/frontend/img/icon/wishlist-Empty.jpg"
                         alt="Empty Cart"
                         className="mx-auto w-40 h-40 object-contain mb-6" />
                     <h2 className="text-2xl font-semibold mb-2">Your Wishlist is Empty</h2>
