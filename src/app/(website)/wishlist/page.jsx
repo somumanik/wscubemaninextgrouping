@@ -19,7 +19,7 @@ export default function Wishlist() {
             <div className='max-w-[1320px] mx-auto border-b-1 border-b-gray-200 border-solid py-5 '></div>
             <div className='max-w-[1320px] mx-auto flex justify-center items-center my-20'>
                 {/* Empty Cart View */}
-                <div className="bg-white rounded-lg shadow p-8 max-w-md w-full text-center">
+                <div className="bg-white rounded-lg shadow-2xl p-8 max-w-md w-full text-center">
                     <img
                         src="/empty-cart.png"
                         alt="Empty Cart"
