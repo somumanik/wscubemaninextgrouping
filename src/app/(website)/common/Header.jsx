@@ -66,7 +66,7 @@ export default function Header() {
 
                                     {/* Offcanvas Panel (Right Side) */}
                                     <div
-                                        className={`relative w-[300px] bg-white shadow-lg h-full p-4 transition-all duration-500 ease-in-out transform ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}
+                                        className={`relative w-[350px] bg-white shadow-lg h-full p-4 transition-all duration-500 ease-in-out transform ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}
                                     >
                                         <button
                                             onClick={() => setIsopen(false)}
@@ -75,8 +75,19 @@ export default function Header() {
                                             ✕
                                         </button>
                                         <h2 className="text-lg font-semibold mb-4">Your Cart</h2>
+                                        <div className='max-w-[100%] border-b-1 border-b-gray-200 border-solid my-3 '></div>
+
                                         <p>Cart is empty for now!</p>
+                                        <img
+                                            src="https://wscubetech.co/Assignments/furniture/public/frontend/img/icon/wishlist-Empty.jpg"
+                                            alt="Empty Cart"
+                                            className="mx-auto w-40 h-40 object-contain mb-6" />
+
+                                        <div className='max-w-[100%] border-b-1 border-b-gray-200 border-solid my-5 '></div>
+                                                <p className='text-center text-gray-500'>Your shopping cart is empty!</p>
+                                        <div className='max-w-[100%] border-b-1 border-b-gray-200 border-solid my-5 '></div>
                                     </div>
+
                                 </div>
                             )}
 
