@@ -6,6 +6,7 @@ import { FaShoppingCart } from 'react-icons/fa'
 import { IoIosArrowDown } from 'react-icons/io'
 import Link from 'next/link'
 
+
 export default function Header() {
     // let[isOpen, setIsopen]=useState[false]
 
@@ -34,12 +35,14 @@ export default function Header() {
                         <div className='border-1 border-gray-400 p-2 flex justify-between items-center rounded'>
                             <input className='outline-0 border-0 ' type="text" placeholder='Search product...' />
                             <p className='hover:text-[#C09578] text-xl'><CiSearch /></p>
-                            
+
                         </div>
                         <div className='border-1 border-gray-400 p-3 flex justify-center items-center rounded'>
-                            <button className='hover:text-[#C09578] text-xl'>
-                                <FaHeart />
-                            </button>
+                          
+                                <Link href={'/wishlist'} className='hover:text-[#C09578] text-xl'>
+                                    <FaHeart />
+                                </Link>
+                            
                         </div>
                         <div className='border-1 border-gray-400 p-2 flex justify-between items-center gap-2 rounded relative'>
                             <div className='absolute top-[23%] left-[-8%] bg-[#C09578] w-[22px] h-[23px] flex justify-center text-white items-center rounded-full p-1'>
@@ -50,7 +53,6 @@ export default function Header() {
                                 <p>Rs. 0.00</p>
                                 < IoIosArrowDown />
                             </button>
-
                         </div>
                     </form>
                 </div>

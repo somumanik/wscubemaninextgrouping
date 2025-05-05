@@ -60,7 +60,8 @@ body {
   overflow-x: hidden;
 }
 
-.bannerslider .slick-dots li button:before, .whatourslider .slick-dots li button:before {
+.bannerslider .slick-dots li button:before,
+.whatourslider .slick-dots li button:before {
   content: "•";
   text-align: center;
   opacity: .25;
@@ -78,7 +79,8 @@ body {
   left: 0;
 }
 
-.bannerslider .slick-dots li.slick-active button:before , .whatourslider .slick-dots li.slick-active button:before {
+.bannerslider .slick-dots li.slick-active button:before,
+.whatourslider .slick-dots li.slick-active button:before {
   opacity: 1;
   color: #C09578 !important;
 }
@@ -121,9 +123,13 @@ body {
 
 
 .whatourslider .slick-dots li button {
-  background-color: #f0f0f0; 
+  background-color: #f0f0f0;
   border-radius: 50%;
   width: 12px;
   height: 12px;
   padding: 0;
+
 }
+
+
+
