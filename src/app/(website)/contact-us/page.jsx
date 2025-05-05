@@ -21,8 +21,6 @@ const MapView = dynamic(() => import("./mapview/MapView"), {
 
 
 
-
-
 export default function ContactUs() {
     const [form, setForm] = useState({
         name: "",

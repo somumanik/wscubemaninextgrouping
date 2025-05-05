@@ -38,11 +38,11 @@ export default function Header() {
 
                         </div>
                         <div className='border-1 border-gray-400 p-3 flex justify-center items-center rounded'>
-                          
-                                <Link href={'/wishlist'} className='hover:text-[#C09578] text-xl'>
-                                    <FaHeart />
-                                </Link>
-                            
+
+                            <Link href={'/wishlist'} className='hover:text-[#C09578] text-xl'>
+                                <FaHeart />
+                            </Link>
+
                         </div>
                         <div className='border-1 border-gray-400 p-2 flex justify-between items-center gap-2 rounded relative'>
                             <div className='absolute top-[23%] left-[-8%] bg-[#C09578] w-[22px] h-[23px] flex justify-center text-white items-center rounded-full p-1'>
@@ -130,7 +130,7 @@ export default function Header() {
                             <IoIosArrowDown />
                         </a>
                         {/* Submenu */}
-                        <ul className='absolute top-[64px] left-0 hidden group-hover:block bg-white  mt-3 transition-all duration-300 ease-in-out z-10 opacity-0 group-hover:opacity-100'>
+                        <ul className='absolute top-[64px] left-0 hidden group-hover:block bg-white  mt-3 transition-all duration-300 z-10 opacity-0 group-hover:opacity-100'>
                             {/* Row Layout for Tables, Page 2, and Page 3 */}
                             <div className='flex'>
                                 {/* Left Column: Tables */}

@@ -1,8 +1,10 @@
+// "use client"
 import WhatOur from "./common/WhatOur";
-import MapView from "./contact-us/mapview/MapView";
+// import SimpleMap from "./contact-us/mapview/MapView";
 import NewsLetter from "./homecontent/NewsLetter";
 import HomeBanner from "./pageslider/HomeBanner";
 import HomeImage from "./pageslider/HomeImage";
+// import dynamic from 'next/dynamic';
 
 
 
@@ -10,6 +12,7 @@ import HomeImage from "./pageslider/HomeImage";
 // [git add netlify.toml
 //   git commit -m "Add Netlify config for Next.js"
 //   git push]
+
 
 
 export default function Home() {
@@ -20,10 +23,10 @@ export default function Home() {
       <HomeImage />
       <WhatOur />
       <NewsLetter />
-      <main className="p-6">
+      {/* <main>
        
-        <MapView />
-      </main>
+        <SimpleMap />
+      </main> */}
     </>
   );
 }
