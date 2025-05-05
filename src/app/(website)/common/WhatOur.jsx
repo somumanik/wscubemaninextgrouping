@@ -17,7 +17,7 @@ export default function WhatOur() {
     return (
         <div className="w-full"> {/* wrapper for height */}
             <p className='pb-12 pt-10 flex justify-center items-center text-[25px]'>What Our Custumers Say ?</p>
-            <Slider {...settings} className="h-full whatourslider">
+            <Slider {...settings} className="h-full whatourslider" style={{zIndex:"-10"}}>
                 {/* Slide 1 */}
                 <div>
                     <div className="flex flex-col items-center justify-center text-center cursor-pointer px-4">

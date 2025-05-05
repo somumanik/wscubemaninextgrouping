@@ -15,7 +15,7 @@ export default function HomeBanner() {
 
 
     return (
-        <Slider {...settings} className="bannerslider">
+        <Slider {...settings} className="bannerslider" style={{zIndex:"-20"}}>
             <div>
                 <img className="w-full h-[500px] object-cover" src="https://wscubetech.co/Assignments/furniture/storage/app/public/uploads/images/slider/add8f1ce-ae5a-4d6b-b573-8c208b6745d5-1671388062.jpg" alt="" />
             </div>
