@@ -20,21 +20,19 @@ export default function Header() {
             </div>
             <div className='max-w-[100%] border-b-1 border-b-gray-200 border-solid '></div>
             {/* Header Top End */}
-            {/* Header Middle Start */}
 
-            {/* logo */}
-            <div className=' max-w-[1320px] mx-auto flex justify-between items-center py-4'>
+            {/* Header Middle Start */}
+            <div className='max-w-[1320px] mx-auto flex justify-between items-center py-4'>
                 <div>
                     <img src="https://wscubetech.co/Assignments/furniture/storage/app/public/uploads/images/company-profile/logo/cccfbdab-3bec-439f-88b9-5694698cd302-1670132652.png" alt="" className='w-[150px]' />
                 </div>
                 <div>
                     <form action="" className='flex items-center gap-4'>
-
-                        <div className=' border-1 border-gray-400 p-2 flex justify-between items-center rounded'>
+                        <div className='border-1 border-gray-400 p-2 flex justify-between items-center rounded'>
                             <input className='outline-0 border-0 ' type="text" placeholder='Search product...' />
                             <CiSearch />
                         </div>
-                        <div className=' border-1 border-gray-400 p-3 flex justify-center items-center rounded'>
+                        <div className='border-1 border-gray-400 p-3 flex justify-center items-center rounded'>
                             <button>
                                 <FaHeart />
                             </button>
@@ -49,21 +47,25 @@ export default function Header() {
                             <p className='font-semibold text-sm'>Rs. 0.00</p>
                             <IoIosArrowDown />
                         </div>
-
                     </form>
                 </div>
             </div>
             <hr className='border-gray-300' />
+            {/* Header Middle End */}
 
             {/* nav */}
             <nav>
                 <ul className='flex justify-center items-center gap-10 text-sm py-5 font-semibold font-sans '>
-                    <li className='text-[#C09578] active'><a>HOME</a></li>
+                    <li className='text-[#C09578] active'>
+                        <a>HOME</a>
+                    </li>
                     <li className='relative group hover:text-[#C09578] cursor-pointer'>
-                        <a className='flex items-center gap-1'> LIVING
-                            <IoIosArrowDown /></a>
+                        <a className='flex items-center gap-1'>
+                            LIVING
+                            <IoIosArrowDown />
+                        </a>
                         {/* Submenu */}
-                        <ul className='absolute left-0 hidden group-hover:block bg-white shadow-lg w-40 mt-2 transition-all duration-500 ease-in-out'>
+                        <ul className='absolute top-[29px] left-0 hidden group-hover:block bg-white shadow-lg w-40 mt-3 transition-all duration-300 ease-in-out z-10 opacity-0 group-hover:opacity-100 max-h-0 group-hover:max-h-[200px]'>
                             <li className='hover:bg-gray-100'>
                                 <Link href={'/page1'} className='block px-4 py-2 text-sm'>
                                     Page 1
@@ -82,10 +84,12 @@ export default function Header() {
                         </ul>
                     </li>
                     <li className='relative group hover:text-[#C09578] cursor-pointer'>
-                        <a className='flex items-center gap-1'> SOFA
-                            <IoIosArrowDown /></a>
+                        <a className='flex items-center gap-1'>
+                            SOFA
+                            <IoIosArrowDown />
+                        </a>
                         {/* Submenu */}
-                        <ul className='absolute left-0 hidden group-hover:block bg-white shadow-lg w-40 mt-2 transition-all duration-500 ease-in-out'>
+                        <ul className='absolute top-[29px] left-0 hidden group-hover:block bg-white shadow-lg w-40 mt-3 transition-all duration-300 ease-in-out z-10 opacity-0 group-hover:opacity-100 max-h-0 group-hover:max-h-[200px] '>
                             <li className='hover:bg-gray-100'>
                                 <Link href={'/page1'} className='block px-4 py-2 text-sm'>
                                     Page 1
@@ -110,7 +114,7 @@ export default function Header() {
                             <IoIosArrowDown />
                         </a>
                         {/* Submenu */}
-                        <ul className='absolute left-0 hidden group-hover:block bg-white shadow-lg w-40 mt-2 transition-all duration-500 ease-in-out'>
+                        <ul className='absolute top-[29px] left-0 hidden group-hover:block bg-white shadow-lg w-40 mt-3 transition-all duration-300 ease-in-out z-10 opacity-0 group-hover:opacity-100 max-h-0 group-hover:max-h-[200px] '>
                             <li className='hover:bg-gray-100'>
                                 <Link href={'/page1'} className='block px-4 py-2 text-sm'>
                                     Page 1
@@ -128,14 +132,14 @@ export default function Header() {
                             </li>
                         </ul>
                     </li>
-                    <li className='hover:text-[#C09578] cursor-pointer'><Link href={'/contact-us'}>CONTACT US</Link></li>
+                    <li className='hover:text-[#C09578] cursor-pointer'>
+                        <Link href={'/contact-us'}>CONTACT US</Link>
+                    </li>
                 </ul>
             </nav>
 
-
             <div className='max-w-[100%] border-b-1 border-b-gray-200 border-solid '></div>
-            {/* Header Middle End */}
-
+            {/* Header Bottom End */}
         </>
     )
 }
