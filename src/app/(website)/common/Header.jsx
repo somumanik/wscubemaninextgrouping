@@ -65,11 +65,18 @@ export default function Header() {
                             <IoIosArrowDown />
                         </a>
                         {/* Submenu */}
-                        <ul className='absolute top-[29px] left-0 hidden group-hover:block bg-white shadow-lg w-40 mt-3 transition-all duration-300 ease-in-out z-10 opacity-0 group-hover:opacity-100 max-h-0 group-hover:max-h-[200px]'>
+                        <ul className='absolute top-[29px] left-0 hidden group-hover:block bg-white shadow-lg w-150 mt-3 transition-all duration-300 ease-in-out z-10 opacity-0 group-hover:opacity-100 max-h-0 group-hover:max-h-[200px]'>
                             <li className='hover:bg-gray-100'>
                                 <Link href={'/page1'} className='block px-4 py-2 text-sm'>
                                     Page 1
                                 </Link>
+                                <ul className='block px-4 py-2 text-sm'>
+                                    <li>Side and end atbles</li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
                             </li>
                             <li className='hover:bg-gray-100'>
                                 <Link href={'/page2'} className='block px-4 py-2 text-sm'>
