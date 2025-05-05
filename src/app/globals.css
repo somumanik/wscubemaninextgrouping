@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  /* zyada scroll ke liye */
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+/* ===== Scrollbar Styling for Webkit Browsers (Chrome, Safari, Edge) ===== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #C09578;
+  border-radius: 6px;
+  border: 2px solid #f0f0f0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #C09578;
+}
+
+/* ===== Firefox Scrollbar Styling ===== */
+body {
+  scrollbar-width: thin;
+  scrollbar-color: #C09578 #f0f0f0;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.bannerslider .slick-dots li button:before, .whatourslider .slick-dots li button:before {
+  content: "•";
+  text-align: center;
+  opacity: .25;
+
+  color: white !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 22px !important;
+  height: 22px !important;
+  font-family: slick;
+  font-size: 15px !important;
+  line-height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.bannerslider .slick-dots li.slick-active button:before , .whatourslider .slick-dots li.slick-active button:before {
+  opacity: 1;
+  color: #C09578 !important;
+}
+
+.slick-dots {
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: block;
+  position: absolute;
+  bottom: 15px !important;
+}
+
+
+
+
+/* .whatourslider .slick-dots li button:before {
+  content: "•";
+  text-align: center;
+  opacity: .25;
+
+  color: transparent !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 22px !important;
+  height: 22px !important;
+  font-family: slick;
+  font-size: 15px !important;
+  line-height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+} */
+/* .whatourslider .slick-dots li.slick-active button:before {
+  opacity: 1;
+  color: #C09578 !important;
+} */
+
+
+.whatourslider .slick-dots li button {
+  background-color: #f0f0f0; 
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  padding: 0;
+}
