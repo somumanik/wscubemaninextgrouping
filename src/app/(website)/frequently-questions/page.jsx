@@ -48,18 +48,19 @@ export default function FAQ() {
                        
 
                         {faqs.map((faq, index) => (
-                            <div key={index} className="mb-3 border rounded">
+                            <div key={index} className="mb-3 border-[#C09578] rounded">
                                 <button
                                     onClick={() => toggleFAQ(index)}
-                                    className={`w-full px-4 py-3 flex justify-between items-center text-left font-medium transition ${activeIndex === index ? "bg-gray-200" : "bg-gray-100"
-                                        }`}
-                                >
+                                    className={`w-full px-4 py-3 flex justify-between items-center text-left font-medium transition ${activeIndex === index ? "bg-[#C09578]" : "bg-gray-200"
+                                        }`}>
                                     <span>{faq.question}</span>
                                     <span>{activeIndex === index ? "−" : "+"}</span>
+               
+                                    
                                 </button>
 
                                 <div
-                                    className={`px-4 overflow-hidden transition-all duration-300 text-gray-700 bg-white ${activeIndex === index ? "max-h-40 py-2" : "max-h-0"
+                                    className={` px-4 overflow-hidden transition-all duration-300 text-[#C09578] bg-white ${activeIndex === index ? "max-h-40 py-2" : "max-h-0"
                                         }`}
                                 >
                                     <p>{faq.answer}</p>

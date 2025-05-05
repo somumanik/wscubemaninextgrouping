@@ -21,7 +21,7 @@ export default function Header() {
             <div className='max-w-[100%] border-b-1 border-b-gray-200 border-solid '></div>
             {/* Header Top End */}
             {/* Header Middle Start */}
-           
+
             {/* logo */}
             <div className=' max-w-[1320px] mx-auto flex justify-between items-center py-4'>
                 <div>
@@ -59,19 +59,74 @@ export default function Header() {
             <nav>
                 <ul className='flex justify-center items-center gap-10 text-sm py-5 font-semibold font-sans '>
                     <li className='text-[#C09578] active'><a>HOME</a></li>
-                    <li className='hover:text-[#C09578] cursor-pointer'>
+                    <li className='relative group hover:text-[#C09578] cursor-pointer'>
                         <a className='flex items-center gap-1'> LIVING
                             <IoIosArrowDown /></a>
+                        {/* Submenu */}
+                        <ul className='absolute left-0 hidden group-hover:block bg-white shadow-lg w-40 mt-2 transition-all duration-500 ease-in-out'>
+                            <li className='hover:bg-gray-100'>
+                                <Link href={'/page1'} className='block px-4 py-2 text-sm'>
+                                    Page 1
+                                </Link>
+                            </li>
+                            <li className='hover:bg-gray-100'>
+                                <Link href={'/page2'} className='block px-4 py-2 text-sm'>
+                                    Page 2
+                                </Link>
+                            </li>
+                            <li className='hover:bg-gray-100'>
+                                <Link href={'/page3'} className='block px-4 py-2 text-sm'>
+                                    Page 3
+                                </Link>
+                            </li>
+                        </ul>
                     </li>
-                    <li className='hover:text-[#C09578] cursor-pointer'>
+                    <li className='relative group hover:text-[#C09578] cursor-pointer'>
                         <a className='flex items-center gap-1'> SOFA
                             <IoIosArrowDown /></a>
+                        {/* Submenu */}
+                        <ul className='absolute left-0 hidden group-hover:block bg-white shadow-lg w-40 mt-2 transition-all duration-500 ease-in-out'>
+                            <li className='hover:bg-gray-100'>
+                                <Link href={'/page1'} className='block px-4 py-2 text-sm'>
+                                    Page 1
+                                </Link>
+                            </li>
+                            <li className='hover:bg-gray-100'>
+                                <Link href={'/page2'} className='block px-4 py-2 text-sm'>
+                                    Page 2
+                                </Link>
+                            </li>
+                            <li className='hover:bg-gray-100'>
+                                <Link href={'/page3'} className='block px-4 py-2 text-sm'>
+                                    Page 3
+                                </Link>
+                            </li>
+                        </ul>
                     </li>
-                    <li className='hover:text-[#C09578] cursor-pointer'>
+                    {/* Pages Menu with Submenu on Hover */}
+                    <li className='relative group hover:text-[#C09578] cursor-pointer'>
                         <a className='flex items-center gap-1'>
                             PAGES
                             <IoIosArrowDown />
                         </a>
+                        {/* Submenu */}
+                        <ul className='absolute left-0 hidden group-hover:block bg-white shadow-lg w-40 mt-2 transition-all duration-500 ease-in-out'>
+                            <li className='hover:bg-gray-100'>
+                                <Link href={'/page1'} className='block px-4 py-2 text-sm'>
+                                    Page 1
+                                </Link>
+                            </li>
+                            <li className='hover:bg-gray-100'>
+                                <Link href={'/page2'} className='block px-4 py-2 text-sm'>
+                                    Page 2
+                                </Link>
+                            </li>
+                            <li className='hover:bg-gray-100'>
+                                <Link href={'/page3'} className='block px-4 py-2 text-sm'>
+                                    Page 3
+                                </Link>
+                            </li>
+                        </ul>
                     </li>
                     <li className='hover:text-[#C09578] cursor-pointer'><Link href={'/contact-us'}>CONTACT US</Link></li>
                 </ul>
