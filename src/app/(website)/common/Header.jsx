@@ -56,40 +56,42 @@ export default function Header() {
                                 < IoIosArrowDown />
                             </button>
 
-                            {isOpen && (
-                                <div className="fixed inset-0 flex justify-end">
-                                    {/* Transparent Overlay */}
-                                    <div
-                                        className="fixed inset-0 bg-black opacity-50"
-                                        onClick={() => setIsopen(false)}
-                                    ></div>
-
-                                    {/* Offcanvas Panel (Right Side) */}
-                                    <div
-                                        className={`relative w-[350px] bg-white shadow-lg h-full p-4 transition-all duration-500 ease-in-out transform ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}
-                                    >
-                                        <button
-                                            onClick={() => setIsopen(false)}
-                                            className="absolute top-2 right-2 text-gray-500 hover:text-black"
-                                        >
-                                            ✕
-                                        </button>
-                                        <h2 className="text-lg font-semibold mb-4">Your Cart</h2>
-                                        <div className='max-w-[100%] border-b-1 border-b-gray-200 border-solid my-3 '></div>
-
-                                        <p>Cart is empty for now!</p>
-                                        <img
-                                            src="https://wscubetech.co/Assignments/furniture/public/frontend/img/icon/wishlist-Empty.jpg"
-                                            alt="Empty Cart"
-                                            className="mx-auto w-40 h-40 object-contain mb-6" />
-
-                                        <div className='max-w-[100%] border-b-1 border-b-gray-200 border-solid my-5 '></div>
-                                                <p className='text-center text-gray-500'>Your shopping cart is empty!</p>
-                                        <div className='max-w-[100%] border-b-1 border-b-gray-200 border-solid my-5 '></div>
-                                    </div>
-
+                            <div className={`fixed inset-0 z-50 flex justify-end pointer-events-none`}>
+                                {/* Overlay */}
+                                <div
+                                    className={`
+                                            fixed inset-0 bg-[rgba(0,0,0,0.5)] transition-opacity duration-300 ease-in-out 
+                                             ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}
+                                          `}
+                                    onClick={() => setIsopen(false)}>
                                 </div>
-                            )}
+
+                                {/* Offcanvas Panel */}
+                                <div
+                                    className={`
+                                        relative w-[350px] bg-white shadow-lg h-full p-4 transform transition-transform duration-500 ease-in-out
+                                        ${isOpen ? 'translate-x-0' : 'translate-x-full'} 
+                                        pointer-events-auto
+                                    `}>
+                                    <button
+                                        onClick={() => setIsopen(false)}
+                                        className="absolute top-2 right-2 text-gray-500 hover:text-black"
+                                    >
+                                        ✕
+                                    </button>
+                                    <h2 className="text-lg font-semibold mb-4">Your Cart</h2>
+                                    <div className='border-b border-gray-200 my-3' />
+                                    <p>Cart is empty for now!</p>
+                                    <img
+                                        src="https://wscubetech.co/Assignments/furniture/public/frontend/img/icon/wishlist-Empty.jpg"
+                                        alt="Empty Cart"
+                                        className="mx-auto w-40 h-40 object-contain mb-6"
+                                    />
+                                    <div className='border-b border-gray-200 my-5' />
+                                    <p className='text-center text-gray-500'>Your shopping cart is empty!</p>
+                                    <div className='border-b border-gray-200 my-5' />
+                                </div>
+                            </div>
 
 
                         </div>
