@@ -1,6 +1,6 @@
 "use client";
 
-// import dynamic from "next/dynamic";
+import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
 import Link from 'next/link';
 import React from 'react';
@@ -8,7 +8,11 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 import { FaBuildingCircleExclamation } from "react-icons/fa6";
 import { MdLocalPhone } from "react-icons/md";
 import { CiMail } from "react-icons/ci";
-import MapView from "./mapview/MapView";
+
+
+const MapView = dynamic(() => import("./mapview/MapView"), {
+    ssr: false,
+  });
 
 // 👇 Dynamically import MapView (SSR disabled)
 // const MapView = dynamic(() => import("@/app/(website)/contact-us/mapview/MapView"), {
