@@ -161,19 +161,19 @@ const onsale = [
 
 export default function TabsComponent() {
     const [activeTab, setActiveTab] = useState('tab1');
-    const [activeContent, setActiveContent] = useState([])
+    
 
     return (
         <>
             <div className="w-full max-w-md mx-auto mt-10">
-                <div className="flex border-b border-gray-300">
+                <div className="flex border-b border-gray-300 ">
                     {tabs.map((tab) => (
                         <button
                             key={tab.id}
                             onClick={() => setActiveTab(tab.id)}
-                            className={`flex-1 border py-2 px-4 text-center ${activeTab === tab.id
+                            className={`flex-1 border border-[#ccc] cursor-pointer hover:text-[#C09578] py-2 px-4 text-center ${activeTab === tab.id
                                 ?
-                                'border-b-2 border-[#C09578] text-xl  text-[#C09578]'
+                                ' hover:border-[#C09578] text-xl  text-[#C09578]'
                                 :
                                 'text-gray-900 text-xl'
                                 }`}
@@ -184,8 +184,8 @@ export default function TabsComponent() {
                 </div>
 
                 {/* Simplified Content */}
-
             </div>
+
             {/* <div className="max-w-[1320px] mx-auto grid grid-cols-4 gap-6 mt-7">
                 {featured.map((item, index) => (
                     <ContentFeatured key={index} item={item} />
@@ -219,7 +219,7 @@ function ContentCard({ item }) {
     const { title, image, price, description, escription } = item;
   
     return (
-      <div className='shadow-2xl flex flex-col'>
+      <div className='shadow-2xl flex flex-col '>
         <div>
           <img src={image} alt={title} />
         </div>
