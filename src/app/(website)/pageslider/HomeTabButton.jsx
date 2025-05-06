@@ -229,14 +229,14 @@ function ContentCard({ item }) {
           <div className='py-1 max-w-full border-b border-gray-200'></div>
           <p className='py-3'>{price}</p>
           <div className='flex justify-center items-center gap-1 py-2'>
-            <div className='border border-gray-400 px-2 py-1 flex justify-center items-center rounded mb-2'>
+            <div className='border hover:border-[#C09578] border-gray-400 px-2 py-1 flex justify-center items-center rounded mb-2'>
               <Link href={'/wishlist'} className='hover:text-[#C09578] text-2xl'>
                 <FaHeart />
               </Link>
             </div>
-            <button className='border border-gray-400 px-2 py-1 flex justify-center items-center rounded mb-2'>
+            <button className='border hover:border-[#C09578] border-gray-400 px-2 py-1 flex justify-center items-center rounded mb-2'>
               <Link href={''}>
-                <p>Add To Cart</p>
+                <p className='hover:text-[#C09578] cursor-pointer '>Add To Cart</p>
               </Link>
             </button>
           </div>
