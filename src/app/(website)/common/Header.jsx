@@ -57,6 +57,10 @@ export default function Header() {
                             </button>
 
                             <div className={`fixed inset-0 z-50 flex justify-end pointer-events-none`}>
+                                {/*  यह पूरा panel screen पर "fixed" रहता है
+                                     justify-end से Cart panel दाईं ओर जाता है
+                                     pointer-events-none से default पर यह क्लिक नहीं लेता
+                                     जब isOpen = true होता है, तो हम नीचे वाले हिस्से को दिखाते हैं */}
                                 {/* Overlay */}
                                 <div
                                     className={`
@@ -73,6 +77,11 @@ export default function Header() {
                                         ${isOpen ? 'translate-x-0' : 'translate-x-full'} 
                                         pointer-events-auto
                                     `}>
+                                        {/*  ये है actual Cart panel
+                                             Width: 350px, Height: full, background: सफेद
+                                             Transition की वजह से यह धीरे-धीरे slide होता है
+                                             translate-x-0: दिखाई दे
+                                             translate-x-full: पूरा बाहर (right side) छुपा हुआ */}
                                     <button
                                         onClick={() => setIsopen(false)}
                                         className="absolute top-2 right-2 text-gray-500 hover:text-black"
@@ -115,7 +124,7 @@ export default function Header() {
                             <IoIosArrowDown />
                         </a>
                         {/* Submenu */}
-                        <ul className='absolute top-[64px] left-0 hidden group-hover:block bg-white  mt-3 transition-all duration-300 ease-in-out z-10 opacity-0 group-hover:opacity-100'>
+                        <ul className='absolute top-[64px] shadow-lg border-1 border-solid border-[#ccc] left-0 hidden group-hover:block bg-white  mt-3 transition-all duration-300 ease-in-out z-10 opacity-0 group-hover:opacity-100'>
                             {/* Row Layout for Tables, Page 2, and Page 3 */}
                             <div className='flex'>
                                 {/* Left Column: Tables */}
@@ -142,13 +151,13 @@ export default function Header() {
                                             </Link>
                                         </li>
                                         <ul className='block px-4 py-2  text-sm'>
-                                            <li className='py-1 text-gray-400 hover:text-[#C09578]'>Prayer Units</li>
-                                            <li className='py-1 text-gray-400 hover:text-[#C09578]'>Display Unit</li>
-                                            <li className='py-1 text-gray-400 hover:text-[#C09578]'>Shoe Racks</li>
-                                            <li className='py-1 text-gray-400 hover:text-[#C09578]'>Chest Of Drawers</li>
-                                            <li className='py-1 text-gray-400 hover:text-[#C09578]'>Cabinets And Sideboard</li>
-                                            <li className='py-1 text-gray-400 hover:text-[#C09578]'>Bookshelves</li>
-                                            <li className='py-1 text-gray-400 hover:text-[#C09578]'>TV Units</li>
+                                            <li className='p-2 text-gray-400 hover:text-[#C09578]'>Prayer Units</li>
+                                            <li className='p-2 text-gray-400 hover:text-[#C09578]'>Display Unit</li>
+                                            <li className='p-2 text-gray-400 hover:text-[#C09578]'>Shoe Racks</li>
+                                            <li className='p-2 text-gray-400 hover:text-[#C09578]'>Chest Of Drawers</li>
+                                            <li className='p-2 text-gray-400 hover:text-[#C09578]'>Cabinets And Sideboard</li>
+                                            <li className='p-2 text-gray-400 hover:text-[#C09578]'>Bookshelves</li>
+                                            <li className='p-2 text-gray-400 hover:text-[#C09578]'>TV Units</li>
                                         </ul>
                                     </div>
                                     <div className='w-50'>
@@ -173,7 +182,7 @@ export default function Header() {
                             <IoIosArrowDown />
                         </a>
                         {/* Submenu */}
-                        <ul className='absolute top-[64px] left-0 hidden group-hover:block bg-white  mt-3 transition-all duration-300 z-10 opacity-0 group-hover:opacity-100'>
+                        <ul className='absolute top-[64px] shadow-lg border-1 border-solid border-[#ccc] left-0 hidden group-hover:block bg-white  mt-3 transition-all duration-300 z-10 opacity-0 group-hover:opacity-100'>
                             {/* Row Layout for Tables, Page 2, and Page 3 */}
                             <div className='flex'>
                                 {/* Left Column: Tables */}
@@ -198,11 +207,11 @@ export default function Header() {
                                             </Link>
                                         </li>
                                         <ul className='block px-4 py-2  text-sm'>
-                                            <li className='py-1 text-gray-400 hover:text-[#C09578]'>L Shape Sofa</li>
-                                            <li className='py-1 text-gray-400 hover:text-[#C09578]'>1 Seater Sofa</li>
-                                            <li className='py-1 text-gray-400 hover:text-[#C09578]'>2 Seater Sofa</li>
-                                            <li className='py-1 text-gray-400 hover:text-[#C09578]'>3 Seater Sofa</li>
-                                            <li className='py-1 text-gray-400 hover:text-[#C09578]'>Wooden Sofa Sets</li>
+                                            <li className='p-2 text-gray-400 hover:text-[#C09578]'>L Shape Sofa</li>
+                                            <li className='p-2 text-gray-400 hover:text-[#C09578]'>1 Seater Sofa</li>
+                                            <li className='p-2 text-gray-400 hover:text-[#C09578]'>2 Seater Sofa</li>
+                                            <li className='p-2 text-gray-400 hover:text-[#C09578]'>3 Seater Sofa</li>
+                                            <li className='p-2 text-gray-400 hover:text-[#C09578]'>Wooden Sofa Sets</li>
 
                                         </ul>
                                     </div>
@@ -228,7 +237,7 @@ export default function Header() {
                             <IoIosArrowDown />
                         </a>
                         {/* Submenu */}
-                        <ul className='absolute top-[64px] left-0 hidden group-hover:block bg-white  mt-3 transition-all duration-300 ease-in-out z-10 opacity-0 group-hover:opacity-100'>
+                        <ul className='absolute top-[64px] shadow-lg border-1 border-solid border-[#ccc] left-0 hidden group-hover:block bg-white  mt-3 transition-all duration-300 ease-in-out z-10 opacity-0 group-hover:opacity-100'>
                             {/* Row Layout for Tables, Page 2, and Page 3 */}
                             <div className='flex'>
                                 {/* Left Column: Tables */}
@@ -237,14 +246,14 @@ export default function Header() {
                                         {/* <Link href={'/page1'} className='block px-4 py-2 text-black text-sm'>
                                             Tables
                                         </Link> */}
-                                        <ul className='block px-4 py-2 text-sm'>
-                                            <li className='py-1 text-gray-400 hover:text-[#C09578]'>
+                                        <ul className='block px-4 py-4 text-sm'>
+                                            <li className='p-2 text-gray-400 hover:text-[#C09578]'>
                                                 <Link href={'/about-us'} >About Us</Link></li>
-                                            <li className='py-1 text-gray-400 hover:text-[#C09578]'>
+                                            <li className='p-2 text-gray-400 hover:text-[#C09578]'>
                                                 <Link href={'/cart'} >Cart</Link></li>
-                                            <li className='py-1 text-gray-400 hover:text-[#C09578]'>
+                                            <li className='p-2 text-gray-400 hover:text-[#C09578]'>
                                                 <Link href={'/checkout'} >Checkout</Link ></li>
-                                            <li className='py-1 text-gray-400 hover:text-[#C09578]'>
+                                            <li className='p-2 text-gray-400 hover:text-[#C09578]'>
                                                 <Link href={'/frequently-questions'} >Frequency Questions</Link ></li>
                                         </ul>
                                     </li>

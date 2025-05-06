@@ -4,6 +4,7 @@ import WhatOur from "./common/WhatOur";
 import NewsLetter from "./homecontent/NewsLetter";
 import HomeBanner from "./pageslider/HomeBanner";
 import HomeImage from "./pageslider/HomeImage";
+import HomeTabButton from "./pageslider/HomeTabButton";
 
 
 
@@ -21,8 +22,10 @@ export default function Home() {
     <>
       <HomeBanner />
       <HomeImage />
+      <HomeTabButton/>
       <WhatOur />
       <NewsLetter />
+     
     </>
   );
 }
