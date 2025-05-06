@@ -150,6 +150,12 @@ const onsale = [
         image: 'https://wscubetech.co/Assignments/furniture/storage/app/public/uploads/images/products/1661502549484Group%201.jpg',
         price: '$7,600',
     },
+    {
+        title: '2 seater sofa',
+        escription: 'Ganthur Sheesham Wood Sofa Set',
+        image: '',
+        price: '$7,600',
+    },
 
 ]
 
