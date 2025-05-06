@@ -39,7 +39,7 @@ export default function Header() {
                         </div>
                         <div className='border-1 border-gray-400 p-3 flex justify-center items-center rounded'>
 
-                            <Link href={'/wishlist'} className='hover:text-[#C09578] text-xl'>
+                            <Link href={'/wishlist'} className='hover:text-[#C09578] text-[17px]'>
                                 <FaHeart />
                             </Link>
 
