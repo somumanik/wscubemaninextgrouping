@@ -66,6 +66,7 @@ export default function HomeImage() {
             </div> */}
 
             <div className='max-w-[1320px] mx-auto grid lg:grid-cols-3 md:grid-cols-1 grid-cols-1 gap-5 p-5 mt-2'>
+                {/* Image 1st Hover Effect */}
                 <div className='relative overflow-hidden cursor-pointer'>
                     <div className='transition-transform duration-300 hover:scale-105'>
                         <img
@@ -80,6 +81,7 @@ export default function HomeImage() {
                     </div>
                 </div>
 
+                {/* Image 2nd Hover Effect */}
                 <div className='relative overflow-hidden cursor-pointer'>
                     <div className='transition-transform duration-300 hover:scale-105'>
                         <img
@@ -94,6 +96,7 @@ export default function HomeImage() {
                     </div>
                 </div>
 
+                {/* Image 3rd Hover Effect */}
                 <div className='relative overflow-hidden cursor-pointer'>
                     <div className='transition-transform duration-300 hover:scale-105'>
                         <img
