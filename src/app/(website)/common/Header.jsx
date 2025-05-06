@@ -196,6 +196,12 @@ export default function Header() {
                                     </li>
                                 </div>
 
+                                {/* <div className='max-w-[1320px] mx-auto'>
+                <div className='flex'> <p className='text-2xl'>Bestselling Products</p><div className='py-2 max-w-full border-b border-gray-200'></div></div>
+
+            </div> */}
+
+
                                 {/* Right Columns: Page 2 and Page 3 */}
                                 <div className=' flex'>
                                     <div className='w-50'>

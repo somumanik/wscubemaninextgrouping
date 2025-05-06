@@ -5,6 +5,7 @@ import NewsLetter from "./homecontent/NewsLetter";
 import BannerTrading from "./pageslider/BannerTrading";
 import HomeBanner from "./pageslider/HomeBanner";
 import HomeImage from "./pageslider/HomeImage";
+import HomeSliderBestproducts from "./pageslider/HomeSliderBestproducts";
 import HomeTabButton from "./pageslider/HomeTabButton";
 
 
@@ -25,6 +26,7 @@ export default function Home() {
       <HomeImage />
       <HomeTabButton/>
       <BannerTrading/>
+      <HomeSliderBestproducts/>
       <WhatOur />
       <NewsLetter />
      
