@@ -10,13 +10,7 @@ import Link from 'next/link'
 export default function Header() {
     {/* Cart Data */ }
 
-    const cartItems = [
-        // Use real dynamic data later — This is just placeholder
-        // Uncomment below to test empty state:
-        // 
-        // Example of empty cart:
-        // return [];
-
+    const [cartItems, setCartItems] = useState([
         {
             id: 1,
             name: 'Evan Coffee Table',
@@ -31,10 +25,14 @@ export default function Header() {
             price: 2900,
             image: 'https://wscubetech.co/Assignments/furniture/public/frontend/img/product/2.jpg',
         },
-    ];
+    ])
 
+    const removeFromCart = (id) => {
+        const updatedCart = cartItems.filter(item => item.id !== id)
+        setCartItems(updatedCart)
+    }
 
-
+    
     let [isOpen, setIsopen] = useState(false)
 
     return (
@@ -155,7 +153,10 @@ export default function Header() {
                                                                     Rs. {item.price.toLocaleString()}
                                                                 </p>
                                                             </div>
-                                                            <button className="text-gray-400 hover:text-red-500 text-lg">
+                                                            <button
+                                                                onClick={() => removeFromCart(item.id)}
+                                                                className="text-gray-400 hover:text-red-500 text-lg"
+                                                            >
                                                                 ✕
                                                             </button>
                                                         </div>
