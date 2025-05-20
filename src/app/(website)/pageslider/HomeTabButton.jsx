@@ -161,7 +161,6 @@ const onsale = [
 
 export default function TabsComponent() {
     const [activeTab, setActiveTab] = useState('tab1');
-    
 
     return (
         <>
@@ -171,11 +170,12 @@ export default function TabsComponent() {
                         <button
                             key={tab.id}
                             onClick={() => setActiveTab(tab.id)}
-                            className={`flex-1 border border-[#ccc] cursor-pointer hover:text-[#C09578] py-2 px-4 text-center ${activeTab === tab.id
-                                ?
-                                ' hover:border-[#C09578] text-xl  text-[#C09578]'
-                                :
-                                'text-gray-900 text-xl'
+                            className={`flex-1 border border-[#ccc] cursor-pointer
+                                         hover:text-[#C09578] py-2 px-4 text-center ${activeTab === tab.id
+                                    ?
+                                    ' hover:border-[#C09578] text-xl  text-[#C09578]'
+                                    :
+                                    'text-gray-900 text-xl'
                                 }`}
                         >
                             {tab.label}
@@ -203,12 +203,18 @@ export default function TabsComponent() {
             </div> */}
 
             <div className="max-w-[1320px] mx-auto grid grid-cols-4 gap-6 mt-7">
-                {activeTab === 'tab1' &&
-                    featured.map((item, index) => <ContentCard key={index} item={item} />)}
-                {activeTab === 'tab2' &&
-                    newarrivals.map((item, index) => <ContentCard key={index} item={item} />)}
-                {activeTab === 'tab3' &&
-                    onsale.map((item, index) => <ContentCard key={index} item={item} />)}
+                {
+                    activeTab === 'tab1' &&
+                    featured.map((item, index) => <ContentCard key={index} item={item} />)
+                }
+                {
+                    activeTab === 'tab2' &&
+                    newarrivals.map((item, index) => <ContentCard key={index} item={item} />)
+                }
+                {
+                    activeTab === 'tab3' &&
+                    onsale.map((item, index) => <ContentCard key={index} item={item} />)
+                }
             </div>
 
         </>
@@ -217,40 +223,40 @@ export default function TabsComponent() {
 
 function ContentCard({ item }) {
     const { title, image, price, description, escription } = item;
-  
+
     return (
-      <div className='shadow-2xl flex flex-col '>
-        <div>
-          <img src={image} alt={title} />
-        </div>
-        <div className='text-center'>
-          <p className='py-1'>{title}</p>
-          <p className='py-2'>{description || escription}</p>
-          <div className='py-1 max-w-full border-b border-gray-200'></div>
-          <p className='py-3'>{price}</p>
-          <div className='flex justify-center items-center gap-1 py-2'>
-            <div className='border hover:border-[#C09578] border-gray-400 px-2 py-1 flex justify-center items-center rounded mb-2'>
-              <Link href={'/wishlist'} className='hover:text-[#C09578] text-2xl'>
-                <FaHeart />
-              </Link>
+        <div className='shadow-2xl flex flex-col '>
+            <div>
+                <img src={image} alt={title} />
             </div>
-            <button className='border hover:border-[#C09578] border-gray-400 px-2 py-1 flex justify-center items-center rounded mb-2'>
-              <Link href={''}>
-                <p className='hover:text-[#C09578] cursor-pointer '>Add To Cart</p>
-              </Link>
-            </button>
-          </div>
+            <div className='text-center'>
+                <p className='py-1'>{title}</p>
+                <p className='py-2'>{description || escription}</p>
+                <div className='py-1 max-w-full border-b border-gray-200'></div>
+                <p className='py-3'>{price}</p>
+                <div className='flex justify-center items-center gap-1 py-2'>
+                    <div className='border hover:border-[#C09578] border-gray-400 px-2 py-1 flex justify-center items-center rounded mb-2'>
+                        <Link href={'/wishlist'} className='hover:text-[#C09578] text-2xl'>
+                            <FaHeart />
+                        </Link>
+                    </div>
+                    <button className='border hover:border-[#C09578] border-gray-400 px-2 py-1 flex justify-center items-center rounded mb-2'>
+                        <Link href={''}>
+                            <p className='hover:text-[#C09578] cursor-pointer '>Add To Cart</p>
+                        </Link>
+                    </button>
+                </div>
+            </div>
         </div>
-      </div>
     );
-  }
+}
 
 
 
-  
+
 
 // function ContentFeatured({ item }) {
-//     console.log(item); // ✅ Yeh ab object show karega: {title: ..., image: ..., etc.}
+//     console.log(item); // Yeh ab object show karega: {title: ..., image: ..., etc.}
 
 //     const { title, image, price, description, escription } = item;
 //     return (
@@ -285,7 +291,7 @@ function ContentCard({ item }) {
 
 
 // function ContentArrivals({ item }) {
-//     console.log(item); // ✅ Yeh ab object show karega: {title: ..., image: ..., etc.}
+//     console.log(item); // Yeh ab object show karega: {title: ..., image: ..., etc.}
 
 //     const { title, image, price, description, escription } = item;
 //     return (
@@ -320,7 +326,7 @@ function ContentCard({ item }) {
 
 
 // function ContentOnsale({ item }) {
-//     console.log(item); // ✅ Yeh ab object show karega: {title: ..., image: ..., etc.}
+//     console.log(item); //  Yeh ab object show karega: {title: ..., image: ..., etc.}
 
 //     const { title, image, price, description, escription } = item;
 //     return (
