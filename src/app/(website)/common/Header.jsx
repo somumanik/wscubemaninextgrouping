@@ -8,6 +8,33 @@ import Link from 'next/link'
 
 
 export default function Header() {
+    {/* Cart Data */ }
+
+    const cartItems = [
+        // Use real dynamic data later — This is just placeholder
+        // Uncomment below to test empty state:
+        // 
+        // Example of empty cart:
+        // return [];
+
+        {
+            id: 1,
+            name: 'Evan Coffee Table',
+            qty: 1,
+            price: 2300,
+            image: 'https://wscubetech.co/Assignments/furniture/public/frontend/img/product/1.jpg',
+        },
+        {
+            id: 2,
+            name: 'Gloria Shoe Racks',
+            qty: 1,
+            price: 2900,
+            image: 'https://wscubetech.co/Assignments/furniture/public/frontend/img/product/2.jpg',
+        },
+    ];
+
+
+
     let [isOpen, setIsopen] = useState(false)
 
     return (
@@ -54,6 +81,8 @@ export default function Header() {
                                 < IoIosArrowDown />
                             </button>
 
+                            {/* OFFCANVAS PANEL STARTED */}
+
                             <div className={`fixed inset-0 z-50 flex justify-end pointer-events-none`}>
                                 {/*  यह पूरा panel screen पर "fixed" रहता है
                                      justify-end से Cart panel दाईं ओर जाता है
@@ -75,30 +104,84 @@ export default function Header() {
                                         ${isOpen ? 'translate-x-0' : 'translate-x-full'} 
                                         pointer-events-auto
                                     `}>
-                                        {/*  ये है actual Cart panel
+                                    {/*  ये है actual Cart panel
                                              Width: 350px, Height: full, background: सफेद
                                              Transition की वजह से यह धीरे-धीरे slide होता है
                                              translate-x-0: दिखाई दे
                                              translate-x-full: पूरा बाहर (right side) छुपा हुआ */}
+
+                                    {/* Close Button */}
                                     <button
                                         onClick={() => setIsopen(false)}
                                         className="absolute top-2 right-2 text-gray-500 hover:text-black"
                                     >
                                         ✕
                                     </button>
-                                    <h2 className="text-lg font-semibold mb-4">Your Cart</h2>
-                                    <div className='border-b border-gray-200 my-3' />
-                                    <p>Cart is empty for now!</p>
-                                    <img
-                                        src="https://wscubetech.co/Assignments/furniture/public/frontend/img/icon/wishlist-Empty.jpg"
-                                        alt="Empty Cart"
-                                        className="mx-auto w-40 h-40 object-contain mb-6"
-                                    />
-                                    <div className='border-b border-gray-200 my-5' />
-                                    <p className='text-center text-gray-500'>Your shopping cart is empty!</p>
-                                    <div className='border-b border-gray-200 my-5' />
+
+                                    {/* Cart Header */}
+
+                                    {/* Cart Items */}
+                                    {
+                                        cartItems.length === 0 ?
+                                            (
+                                                //  Empty Cart UI
+                                                <div className="flex flex-col items-center justify-center mt-12 text-center">
+                                                    <img
+                                                        src="https://cdn-icons-png.flaticon.com/512/2038/2038854.png"
+                                                        alt="Empty Cart"
+                                                        className="w-28 h-28 opacity-50"
+                                                    />
+                                                    <p className="text-sm mt-4 text-gray-500">Your cart is currently empty</p>
+                                                </div>
+                                            )
+                                            :
+                                            (
+                                                <>
+                                                    {/*  Cart Filled UI */}
+                                                    {cartItems.map((item) => (
+                                                        <div key={item.id} className="flex items-start gap-4 mb-4 border-b pb-4">
+                                                            <img
+                                                                src={item.image}
+                                                                alt={item.name}
+                                                                className="w-[80px] h-[80px] object-cover rounded"
+                                                            />
+                                                            <div className="flex-1">
+                                                                <p className="font-semibold text-[15px]">{item.name}</p>
+                                                                <p className="text-sm text-gray-600">Qty: {item.qty}</p>
+                                                                <p className="text-[14px] font-semibold text-[#C09578]">
+                                                                    Rs. {item.price.toLocaleString()}
+                                                                </p>
+                                                            </div>
+                                                            <button className="text-gray-400 hover:text-red-500 text-lg">✕</button>
+                                                        </div>
+                                                    ))}
+
+                                                    {/* Subtotal */}
+                                                    <div className="flex justify-between font-medium text-sm py-4 border-t border-b">
+                                                        <p>Subtotal:</p>
+                                                        <p>
+                                                            Rs.{' '}
+                                                            {cartItems
+                                                                .reduce((total, item) => total + item.price * item.qty, 0)
+                                                                .toLocaleString()}
+                                                        </p>
+                                                    </div>
+
+                                                    {/* Buttons */}
+                                                    <div className="mt-4 space-y-3 bg-black p-4 rounded-md">
+                                                        <button className="w-full bg-[#1e1e1e] text-white py-2 rounded hover:bg-[#2d2d2d]">
+                                                            VIEW CART
+                                                        </button>
+                                                        <button className="w-full bg-[#C09578] text-white py-2 rounded hover:bg-[#a47d60]">
+                                                            CHECKOUT
+                                                        </button>
+                                                    </div>
+                                                </>
+                                            )
+                                    }
                                 </div>
                             </div>
+
 
 
                         </div>
@@ -195,12 +278,6 @@ export default function Header() {
                                         </ul>
                                     </li>
                                 </div>
-
-                                {/* <div className='max-w-[1320px] mx-auto'>
-                <div className='flex'> <p className='text-2xl'>Bestselling Products</p><div className='py-2 max-w-full border-b border-gray-200'></div></div>
-
-            </div> */}
-
 
                                 {/* Right Columns: Page 2 and Page 3 */}
                                 <div className=' flex'>
