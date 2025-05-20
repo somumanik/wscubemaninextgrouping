@@ -111,8 +111,8 @@ export default function Header() {
             {/* nav */}
             <nav>
                 <ul className='flex justify-center items-center gap-10 text-sm font-semibold font-sans '>
-                    <li className='text-[#C09578] active'>
-                        <a>HOME</a>
+                    <li className='text-[#C09578] active cursor-pointer'>
+                        <Link href={'/'}>HOME</Link>
                     </li>
 
                     {/* LIVING */}

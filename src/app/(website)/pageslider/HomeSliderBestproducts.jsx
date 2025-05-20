@@ -314,7 +314,7 @@ export default function HomeSliderBestproducts() {
                   <p className='text-gray-700 my-2 text-[13px]'>Chest Of Drawers</p>
                   <p className='text-sm text-gray-900 my-3'>Cabinets and Sideboard</p>
                   <div className='max-w-[1320px] mx-auto my-5 border-b border-gray-200 w-50'></div>
-                  <p className='text-[#C09578]'>Rs. 25000</p>
+                  <p className='text-[#C09578]'><span className='line-through text-red-600 text-[13px]'>Rs. 28000</span>&nbsp; Rs. 25000</p>
                   <div className='flex justify-center gap-1 mt-3 mb-5'>
                     <Link href="/wishlist" className='flex justify-center items-center px-2 py-1 rounded bg-gray-100 hover:border-[#C09578]'>
                       <FaRegHeart  className=' hover:text-[#C09578]' />

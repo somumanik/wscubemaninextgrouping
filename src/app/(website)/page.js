@@ -7,6 +7,7 @@ import HomeBanner from "./pageslider/HomeBanner";
 import HomeImage from "./pageslider/HomeImage";
 import HomeSliderBestproducts from "./pageslider/HomeSliderBestproducts";
 import HomeTabsComponent from "./pageslider/HomeTabButton";
+import ThreeCompnent from "./pageslider/ThreeCompnent";
 // import HomeTabButton from "./pageslider/HomeTabButton";
 
 
@@ -28,6 +29,7 @@ export default function Home() {
       <HomeTabsComponent/>
       <BannerTrading/>
       <HomeSliderBestproducts/>
+      <ThreeCompnent/>
       <WhatOur />
       <NewsLetter />
      

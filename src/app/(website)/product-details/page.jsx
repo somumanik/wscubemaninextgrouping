@@ -29,7 +29,7 @@ export default function ProductDetails() {
                     </div>
                     <div>
                         <p className='text-[20px] mb-3'>Evan Coffee Table</p>
-                        <p className='py-1 mb-5'>Rs. 2,600 Rs. 2,300</p>
+                        <p className='py-1 mb-5'><span className='line-through text-red-600 text-[13px]'>Rs. 32000</span>&nbsp; Rs. 2,300</p>
                         <p className='py-1'>The Evan Coffee table has stools that can be encased under the table.</p>
                         <div className='max-w-[1320px] mx-auto border-b-1 border-b-gray-200 border-solid py-5'></div>
 
@@ -54,6 +54,7 @@ export default function ProductDetails() {
                 <p>The Evan Coffee table has stools that can be encased under the table. The Stools are cushioned to keep you comfortable, and since they can be put away under the table, they do not take up much space. This table is made of Sheesham, and the design is practical and functional. It can seamlessly blend in with any décor style owing to its simple yet elegant design.</p>
             </div>
 
+              <HomeSliderBestproducts/>
               <HomeSliderBestproducts/>
                
 
