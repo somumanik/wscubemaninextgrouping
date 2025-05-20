@@ -24,8 +24,10 @@ export default function ProductDetails() {
             <div className='max-w-[1320px] mx-auto border-b-1 border-b-gray-200 border-solid py-5'></div>
             <div className='max-w-[1320px] mx-auto flex justify-center items-center my-10'>
                 <div className='grid grid-cols-2 gap-5'>
-                    <div>
-                        <img src="https://wscubetech.co/Assignments/furniture/storage/app/public/uploads/images/products/1617829892944Evan%20Coffee%20Table__.jpg" alt="" />
+                    <div className='relative overflow-hidden cursor-pointer'>
+                        <div className='transition-transform duration-300 hover:scale-105'>
+                            <img src="https://wscubetech.co/Assignments/furniture/storage/app/public/uploads/images/products/1617829892944Evan%20Coffee%20Table__.jpg" alt="" />
+                        </div>
                     </div>
                     <div>
                         <p className='text-[20px] mb-3'>Evan Coffee Table</p>
@@ -54,9 +56,9 @@ export default function ProductDetails() {
                 <p>The Evan Coffee table has stools that can be encased under the table. The Stools are cushioned to keep you comfortable, and since they can be put away under the table, they do not take up much space. This table is made of Sheesham, and the design is practical and functional. It can seamlessly blend in with any décor style owing to its simple yet elegant design.</p>
             </div>
 
-              <HomeSliderBestproducts/>
-              <HomeSliderBestproducts/>
-               
+            <HomeSliderBestproducts />
+            <HomeSliderBestproducts />
+
 
             <div className='max-w-[100%] border-b-1 border-b-gray-200 border-solid py-5 mb-8 '></div>
         </>
