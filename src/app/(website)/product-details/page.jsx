@@ -4,9 +4,50 @@ import Link from 'next/link'
 import React from 'react'
 import { MdKeyboardArrowRight } from 'react-icons/md'
 import HomeSliderBestproducts from '../pageslider/HomeSliderBestproducts'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from 'react-slick';
 
 
 export default function ProductDetails() {
+    const NextArrow = (props) => {
+        const { className, style, onClick } = props;
+        return (
+            <div
+                className={`${className} z-50 right-0`}
+                style={{ ...style, display: 'block', background: '#C09578', borderRadius: '50%' }}
+                onClick={onClick}
+            />
+        );
+    };
+
+    const PrevArrow = (props) => {
+        const { className, style, onClick } = props;
+        return (
+            <div
+                className={`${className} z-50 left-0`}
+                style={{ ...style, display: 'block', background: '#C09578', borderRadius: '50%' }}
+                onClick={onClick}
+            />
+        );
+    };
+
+
+    const settings = {
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToScroll: 1,
+        arrows: true,
+        centerMode: true,
+        centerPadding: '0px',
+        slidesToShow: 5,
+        nextArrow: <NextArrow />,
+        prevArrow: <PrevArrow />
+    };
+
+
+
     return (
         <>
             <div className='flex flex-col justify-center items-center pt-12'>
@@ -24,10 +65,33 @@ export default function ProductDetails() {
             <div className='max-w-[1320px] mx-auto border-b-1 border-b-gray-200 border-solid py-5'></div>
             <div className='max-w-[1320px] mx-auto flex justify-center items-center my-10'>
                 <div className='grid grid-cols-2 gap-5'>
-                    <div className='relative overflow-hidden cursor-pointer'>
-                        <div className='transition-transform duration-300 hover:scale-105'>
-                            <img src="https://wscubetech.co/Assignments/furniture/storage/app/public/uploads/images/products/1617829892944Evan%20Coffee%20Table__.jpg" alt="" />
+                    <div>
+                        <div className='relative overflow-hidden cursor-pointer'>
+                            <div className='transition-transform duration-300 hover:scale-105'>
+                                <img src="https://wscubetech.co/Assignments/furniture/storage/app/public/uploads/images/products/1617829892944Evan%20Coffee%20Table__.jpg" alt="" />
+                            </div>
                         </div>
+                        <Slider {...settings} className="my-2 mx-5 gap-x-5 z-50">
+                            <div className='px-1'>
+                                <img className="w-50 h-[75px] transition-transform duration-300 group-[.slick-center]:scale-125" src="https://wscubetech.co/Assignments/furniture/storage/app/public/uploads/images/products/1617829892944Evan%20Coffee%20Table__.jpg" alt="" />
+                            </div>
+                            <div className='px-1'>
+                                <img className="w-50 h-[75px] transition-transform duration-300 group-[.slick-center]:scale-125" src="https://wscubetech.co/Assignments/furniture/storage/app/public/uploads/images/products/1617829892944Evan%20Coffee%20Table__.jpg" alt="" />
+                            </div>
+                            <div className='px-1'>
+                                <img className="w-50 h-[75px] transition-transform duration-300 group-[.slick-center]:scale-125" src="https://wscubetech.co/Assignments/furniture/storage/app/public/uploads/images/products/1617829892944Evan%20Coffee%20Table__.jpg" alt="" />
+                            </div>
+                            <div className='px-1'>
+                                <img className="w-50 h-[75px] transition-transform duration-300 group-[.slick-center]:scale-125" src="https://wscubetech.co/Assignments/furniture/storage/app/public/uploads/images/products/1617829892944Evan%20Coffee%20Table__.jpg" alt="" />
+                            </div>
+                            <div className='px-1'>
+                                <img className="w-50 h-[75px] transition-transform duration-300 group-[.slick-center]:scale-125" src="https://wscubetech.co/Assignments/furniture/storage/app/public/uploads/images/products/1617829892944Evan%20Coffee%20Table__.jpg" alt="" />
+                            </div>
+                            <div className='px-1'>
+                                <img className="w-50 h-[75px] transition-transform duration-300 group-[.slick-center]:scale-125" src="https://wscubetech.co/Assignments/furniture/storage/app/public/uploads/images/products/1617829892944Evan%20Coffee%20Table__.jpg" alt="" />
+                            </div>
+
+                        </Slider>
                     </div>
                     <div>
                         <p className='text-[20px] mb-3'>Evan Coffee Table</p>
