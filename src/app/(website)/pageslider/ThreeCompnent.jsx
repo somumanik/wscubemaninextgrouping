@@ -8,7 +8,7 @@ import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 
 export default function ThreeCompnent() {
     return (
-        <div className='bg-[#F8F9F9] mt-12'>
+        <div className='bg-[#F8F9F9] mt-12 border border-gray-200'>
             <div className='max-w-[1320px] mx-auto px-4'>
                 <div className='grid grid-cols-1 md:grid-cols-3 gap-8 py-12 items-center text-center'>
 
