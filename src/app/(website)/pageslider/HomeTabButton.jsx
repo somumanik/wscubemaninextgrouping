@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import React from 'react'
-import { FaHeart } from 'react-icons/fa';
+import { FaHeart, FaRegHeart } from 'react-icons/fa';
 
 const tabs = [
     {
@@ -238,8 +238,8 @@ function ContentCard({ item }) {
                 <p className='py-3'>{price}</p>
                 <div className='flex justify-center items-center gap-1 py-2'>
                     <div className='border hover:border-[#C09578] border-gray-400 px-2 py-1 flex justify-center items-center rounded mb-2'>
-                        <Link href={'/wishlist'} className='hover:text-[#C09578] text-2xl'>
-                            <FaHeart />
+                        <Link href={'/wishlist'} className='hover:text-[#C09578] text-[22px]'>
+                             <FaRegHeart  className=' hover:text-[#C09578] ' />
                         </Link>
                     </div>
                     <button className='border hover:border-[#C09578] border-gray-400 px-2 py-1 flex justify-center items-center rounded mb-2'>
