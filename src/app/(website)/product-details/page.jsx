@@ -9,6 +9,19 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
 
 
+// react-slick jab tumhara custom arrow render karta hai, to woh us custom component ko kuch props ke saath call karta hai — jaise:
+
+// className
+
+// style
+
+// onClick
+
+// currentSlide
+
+// slideCount
+
+
 export default function ProductDetails() {
     const NextArrow = (props) => {
         const { className, style, onClick } = props;

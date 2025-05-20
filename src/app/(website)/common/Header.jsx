@@ -256,7 +256,7 @@ export default function Header() {
                                             <li className='p-2 text-gray-400 hover:text-[#C09578]'>
                                                 <Link href={'/cart'} >Cart</Link></li>
                                             <li className='p-2 text-gray-400 hover:text-[#C09578]'>
-                                                <Link href={'/checkout'} >Checkout</Link ></li>
+                                                <Link href={'/'} >Checkout</Link ></li>
                                             <li className='p-2 text-gray-400 hover:text-[#C09578]'>
                                                 <Link href={'/frequently-questions'} >Frequency Questions</Link ></li>
                                         </ul>
