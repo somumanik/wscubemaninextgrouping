@@ -159,7 +159,7 @@ const onsale = [
 
 ]
 
-export default function TabsComponent() {
+export default function HomeTabsComponent() {
     const [activeTab, setActiveTab] = useState('tab1');
 
     return (
@@ -227,7 +227,9 @@ function ContentCard({ item }) {
     return (
         <div className='shadow-2xl flex flex-col '>
             <div>
-                <img src={image} alt={title} />
+                <Link href={'/product-details'}>
+                    <img src={image} alt={title} />
+                </Link>
             </div>
             <div className='text-center'>
                 <p className='py-1'>{title}</p>

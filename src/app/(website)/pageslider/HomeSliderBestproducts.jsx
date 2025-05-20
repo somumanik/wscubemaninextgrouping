@@ -269,8 +269,9 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
 import Link from 'next/link';
 import { FaHeart, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { FaRegHeart } from "react-icons/fa6";
 
-export default function HomeBanner() {
+export default function HomeSliderBestproducts() {
   const sliderRef = React.useRef(null);
 
   const settings = {
@@ -288,15 +289,15 @@ export default function HomeBanner() {
       {/* Heading + Border + Chevrons */}
       <div className='flex items-center justify-between mb-6'>
         <h1 className='text-xl whitespace-nowrap'>Bestselling Products</h1>
-        <div className='flex items-center gap-3 flex-1 ml-4 border-b border-gray-400'>
+        <div className='flex items-center gap-3 flex-1 ml-4 border-b-2 border-gray-200'>
           {/* Empty space filled with border */}
         </div>
         {/* Chevron Arrows */}
         <div className="flex items-center gap-2 ml-4">
-          <button onClick={() => sliderRef.current?.slickPrev()} className='text-xl text-gray-700 hover:text-black'>
+          <button onClick={() => sliderRef.current?.slickPrev()} className='text-[16px] text-gray-700 hover:text-[#C09578]'>
             <FaChevronLeft />
           </button>
-          <button onClick={() => sliderRef.current?.slickNext()} className='text-xl text-gray-700 hover:text-black'>
+          <button onClick={() => sliderRef.current?.slickNext()} className='text-[16px] text-gray-700 hover:text-[#C09578]'>
             <FaChevronRight />
           </button>
         </div>
@@ -306,20 +307,20 @@ export default function HomeBanner() {
       <div className="relative">
         <Slider ref={sliderRef} {...settings}>
           {Array(6).fill(0).map((_, index) => (
-            <div key={index} className='px-2'>
-              <div className='bg-white shadow p-3'>
-                <img src="https://wscubetech.co/Assignments/furniture/storage/app/public/uploads/images/slider/648e23d4-5e5d-4fd0-b0f7-856ee45c6629-1671388137.jpg" alt="" />
+            <div key={index} className='px-1 bg-white shadow-2xl'>
+              <div className='bg-white  border border-gray-100 p-1'>
+                <img src="https://wscubetech.co/Assignments/furniture/storage/app/public/uploads/images/slider/648e23d4-5e5d-4fd0-b0f7-856ee45c6629-1671388137.jpg" alt=""  className='w-100 h-45'/>
                 <div className='text-center mt-3'>
-                  <p>Chest Of Drawers</p>
-                  <p className='text-sm text-gray-600'>Cabinets and Sideboard</p>
-                  <div className='my-2 border-b'></div>
-                  <p>Rs. 25000</p>
-                  <div className='flex justify-center gap-2 mt-2'>
-                    <Link href="/wishlist" className='border px-2 py-1 rounded hover:border-[#C09578]'>
-                      <FaHeart className='text-xl hover:text-[#C09578]' />
+                  <p className='text-gray-700 my-2 text-[13px]'>Chest Of Drawers</p>
+                  <p className='text-sm text-gray-900 my-3'>Cabinets and Sideboard</p>
+                  <div className='max-w-[1320px] mx-auto my-5 border-b border-gray-200 w-50'></div>
+                  <p className='text-[#C09578]'>Rs. 25000</p>
+                  <div className='flex justify-center gap-1 mt-3 mb-5'>
+                    <Link href="/wishlist" className='flex justify-center items-center px-2 py-1 rounded bg-gray-100 hover:border-[#C09578]'>
+                      <FaRegHeart  className=' hover:text-[#C09578]' />
                     </Link>
-                    <button className='border px-2 py-1 rounded hover:border-[#C09578]'>
-                      <p className='hover:text-[#C09578]'>Add To Cart</p>
+                    <button className=' bg-gray-100   rounded hover:border-[#C09578]'>
+                      <p className='hover:text-[#C09578] text-gray-600 px-4 py-2 text-[12px]'>Add To Cart</p>
                     </button>
                   </div>
                 </div>
