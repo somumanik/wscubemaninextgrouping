@@ -113,10 +113,10 @@ export default function Header() {
                                     {/* Close Button */}
                                     <button
                                         onClick={() => setIsopen(false)}
-                                        className="absolute top-2 right-2 text-gray-500 hover:text-black"
-                                    >
-                                        ✕
+                                        className="absolute top-2 right-2 cursor-pointer hover:text-red-500 pb-10  text-gray-500 "
+                                    >Close ✕
                                     </button>
+                                    <div className='border-b border-gray-50 pt-10'></div>
 
                                     {/* Cart Header */}
 
@@ -139,11 +139,14 @@ export default function Header() {
                                                 <>
                                                     {/*  Cart Filled UI */}
                                                     {cartItems.map((item) => (
-                                                        <div key={item.id} className="flex items-start gap-4 mb-4 border-b pb-4">
+                                                        <div
+                                                            key={item.id}
+                                                            className="flex gap-4 items-center border-b border-gray-300 pt-12 py-4"
+                                                        >
                                                             <img
                                                                 src={item.image}
                                                                 alt={item.name}
-                                                                className="w-[80px] h-[80px] object-cover rounded"
+                                                                className="w-[70px] h-[70px] object-cover rounded"
                                                             />
                                                             <div className="flex-1">
                                                                 <p className="font-semibold text-[15px]">{item.name}</p>
@@ -152,12 +155,14 @@ export default function Header() {
                                                                     Rs. {item.price.toLocaleString()}
                                                                 </p>
                                                             </div>
-                                                            <button className="text-gray-400 hover:text-red-500 text-lg">✕</button>
+                                                            <button className="text-gray-400 hover:text-red-500 text-lg">
+                                                                ✕
+                                                            </button>
                                                         </div>
                                                     ))}
 
                                                     {/* Subtotal */}
-                                                    <div className="flex justify-between font-medium text-sm py-4 border-t border-b">
+                                                    <div className="flex justify-between font-medium text-sm py-5 mt-12 border-t border-b border-gray-400">
                                                         <p>Subtotal:</p>
                                                         <p>
                                                             Rs.{' '}
