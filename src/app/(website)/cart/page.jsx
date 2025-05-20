@@ -34,22 +34,8 @@ export default function Cart() {
                 </div>
 
             </div>
-            <div className='max-w-[1320px] mx-auto '>
+            <div className='max-w-[1320px] mx-auto mb-5 '>
                 <div className='max-w-[100%] border-b-1 border-b-gray-200 border-solid py-5 mb-5 '></div>
-                {/* <section className="bg-gray-900">
-                    <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-                        <div className="mx-auto max-w-screen-sm text-center">
-                            <h1 className="mb-4 text-7xl mb-24 tracking-tight font-extrabold lg:text-9xl text-white">404</h1>
-                            <p className="mb-4 text-3xl tracking-tight font-bold md:text-4xl text-white">Page not found currently</p>
-                            <p className="mb-4 text-lg font-light text-gray-300">Sorry, we can't find such page.</p>
-
-                            <button type="button" className="text-white text-center bg-purple-700 hover:bg-purple-800 focus:outline-none focus:ring-1 focus:ring-purple-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">Back To Home</button>
-                        </div>
-                    </div>
-                </section> */}
-
-
-
                 <table className="w-full border border-gray-200 my-8">
                     <thead>
                         <tr className="bg-gray-100">
@@ -98,16 +84,51 @@ export default function Cart() {
                                 </td>
                             </tr>
                         ))}
-                        <tr className='col-span-6'>
-                            <td className='flex items-center justify-end'><button>Update Cart</button></td>
+                        <tr>
+                            <td colSpan={6} className="p-2 text-right">
+                                <button className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-[#C09578] cursor-pointer transition">
+                                    Update Cart
+                                </button>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
 
+                <div className='grid grid-cols-2 gap-6'>
+                    <div >
+                        <p className='border bg-gray-900 text-white p-3'>COUPON</p>
+                        <div className='border border-gray-200 ps-4'>
+                            <p className='my-4'>Enter your coupon code if you have one.</p>
+                            <form action="" className='flex gap-5 mb-10'>
+                                <input className='p-2 border border-gray-200 outline-[0]' type="search" placeholder='Coupon Code' />
+                                <button type="button" className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-[#C09578] cursor-pointer transition">Apply Coupon</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div >
+                        <p className='border bg-gray-900 text-white p-3'>CART TOTALS</p>
+                        <div className='border border-gray-200 ps-4'>
+                            <div className='flex justify-between pe-4 my-4'>
+                                <p>Subtotal</p>
+                                <p>Rs. 5,200</p>
+                            </div>
+                            <div className='flex justify-between pe-4 my-4'>
+                                <p>Discount (-)</p>
+                                <p>Rs. 0</p>
+                            </div>
+                            <div className='flex justify-between pe-4 my-4'>
+                                <p>Total</p>
+                                <p>Rs. 5,200</p>
+                            </div>
+                            <div className="py-3 text-right ">
+                                <button type="button" className="bg-blue-600 text-right text-white px-6 py-2 hover:bg-[#C09578] cursor-pointer rounded transition" >Proceed To Checkout</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
-
-
+            <div className='max-w-[100%] border-b-1 border-b-gray-200 border-solid py-5 mb-8 '></div>
         </>
     )
 }
