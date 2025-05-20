@@ -11,7 +11,7 @@ import { IoIosArrowDown } from 'react-icons/io'
 export default function Footer() {
   return (
     <>
-      <div className='max-w-[1320px] mx-auto grid lg:grid-cols-[40%_auto] md:grid-cols-2 grid-cols-1 mt-10'>
+      <div className='max-w-[1320px] mx-auto grid lg:grid-cols-[32%_auto] md:grid-cols-2 grid-cols-1 mt-10'>
         <div>
           <h1 className='mb-4 text-[19px] text-[#242424]'>Contact Us</h1>
           <div className='text-[15px] mb-2 group'>
@@ -64,19 +64,19 @@ export default function Footer() {
               <img width={95} src="https://wscubetech.co/Assignments/furniture/storage/app/public/uploads/images/products/1619988418966Leo%20TV%20Cabinets.jpg" alt="" />
 
               <div className='flex flex-col'>
-                <p>1</p>
-                <p>2</p>
-                <p>3</p>
+                <p className='text-[13px] cursor-pointer pb-1'>Console Table</p>
+                <p className='text-[15px] text-blue-500 hover:text-[#C09578]'>Rex Console Table</p>
+                <p className='text-[#C09578]'><span className='line-through text-red-600 text-[13px]'>Rs. 32000</span>&nbsp;Rs. 2,200</p>
               </div>
             </div>
             <div className='max-w-[100%] border-b-1 border-b-gray-200 border-solid my-4 '></div>
             <div className='flex gap-4'>
               <img width={95} src="https://wscubetech.co/Assignments/furniture/storage/app/public/uploads/images/products/1615277326496Sapien%20Sofa%20Cum%20Bed__.jpg" alt="" />
 
-              <div className='flex flex-col'>
-                <p>1</p>
-                <p>2</p>
-                <p>3</p>
+              <div className='flex flex-col cursor-pointer pb-1'>
+                <p className='text-[13px]'>3 Seater Sofa</p>
+                <p className='text-[15px] text-blue-500 hover:text-[#C09578]'>Victoria Sheesham Wood Sofa Set</p>
+                <p className='text-[#C09578]'><span className='line-through text-red-600 text-[13px]'>Rs. 32000</span>&nbsp;Rs. 7,000</p>
               </div>
             </div>
           </div>
