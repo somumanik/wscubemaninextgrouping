@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 import { MdKeyboardArrowRight } from "react-icons/md"
+import { MdDelete } from "react-icons/md";
 
 export default function Cart() {
     const cartItems = [
@@ -52,7 +53,7 @@ export default function Cart() {
                             <tr key={item.id}>
                                 {/* Delete */}
                                 <td className="py-2 px-2 border-b border-r border-gray-200 text-center w-16">
-                                    <button className="text-red-500 font-bold">Delete</button>
+                                    <button className="text-[#C09578] font-bold cursor-pointer"><MdDelete /></button>
                                 </td>
                                 {/* Image */}
                                 <td className="py-2 px-4 border-b border-r border-gray-200 text-center w-40">
